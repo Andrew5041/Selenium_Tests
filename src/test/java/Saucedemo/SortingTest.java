@@ -1,5 +1,6 @@
 package Saucedemo;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +10,7 @@ import java.util.List;
 
 public class SortingTest extends BaseTests {
 
-
+    @Epic("SauceDemo")
     @Test
     public void checkSortingTest(){
 
@@ -33,7 +34,7 @@ public class SortingTest extends BaseTests {
         List<Double> actualPrices = inventoryPage.getProductPrices();
 
         // 4. Weryfikacja (Asercja)
-        // Tworzymy kopię listy i sortujemy ją "wzorcowo" używając Javy
+        // Tworzymy kopię listy i ją sortujemy
         List<Double> expectedSortedPrices = new ArrayList<>(actualPrices);
         Collections.sort(expectedSortedPrices);
 

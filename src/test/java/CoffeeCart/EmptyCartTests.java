@@ -1,12 +1,13 @@
 package CoffeeCart;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class EmptyCartTests extends BaseTests {
 
-
+    @Epic("CoffeCart")
     @Test
     @DisplayName("Check if cart is empty on start")
     public void cartShouldBeEmptyOnStart(){
@@ -20,6 +21,7 @@ public class EmptyCartTests extends BaseTests {
 
     }
 
+    @Epic("CoffeCart")
     @Test
     @DisplayName("Negative: Checkout with empty cart")
     public void shouldBeAbleToProceedWithEmptyCart() {

@@ -1,10 +1,12 @@
 package TheInternet;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class DragAndDropTests extends BaseTests{
-    
+
+    @Epic("TheInternet")
     @Test
     public void checkSwitchingSquares() {
 

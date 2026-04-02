@@ -1,5 +1,6 @@
 package TheInternet;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -7,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class NestedFramesTests extends BaseTests{
 
-
+    @Epic("TheInternet")
     @Test
     public void checkFramesSwitchingTest(){
 
@@ -25,8 +26,5 @@ public class NestedFramesTests extends BaseTests{
 
         nestedFramesPage.goToBottomFrame();
         Assertions.assertEquals("BOTTOM", nestedFramesPage.getBottomFrameText());
-
-
     }
-
 }

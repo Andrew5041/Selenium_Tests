@@ -19,9 +19,9 @@ public class CheckoutPage extends BasePage{
 
     public void fillCheckoutFormular(String firstName, String lastName, String postalCode){
 
-        driver.findElement(firstNameField).sendKeys("Jan");
-        driver.findElement(lastNameField).sendKeys("Kowalski");
-        driver.findElement(postalCodeField).sendKeys("20-601");
+        driver.findElement(firstNameField).sendKeys(firstName);
+        driver.findElement(lastNameField).sendKeys(lastName);
+        driver.findElement(postalCodeField).sendKeys(postalCode);
     }
 
     public OverviewPage goToOverview(){

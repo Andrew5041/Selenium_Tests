@@ -1,11 +1,13 @@
 package CoffeeCart;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class HoverTests extends BaseTests {
 
+    @Epic("CoffeCart")
     @Test
     @DisplayName("Should show coffee description on hover")
     public void shouldShowDescriptionOnHover() {

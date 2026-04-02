@@ -1,14 +1,14 @@
 package CoffeeCart;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CheckoutTests extends BaseTests {
 
-
+    @Epic("CoffeCart")
     @Test
     public void CheckSuccessfulCheckout() {
-
 
     CoffeePage coffeePage = new CoffeePage(driver);
 
@@ -26,6 +26,5 @@ public class CheckoutTests extends BaseTests {
 
     Assertions.assertEquals(expectedMsg, coffeePage.getSuccessMessage());
 
-}
-
+    }
 }

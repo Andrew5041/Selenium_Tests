@@ -1,12 +1,13 @@
 package Saucedemo;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class LoginTest extends BaseTests {
 
-
+    @Epic("SauceDemo")
     @Test
     @DisplayName("Standard user should be able to login and see inventory page")
     public void standardUserLoginTest() {
@@ -22,6 +23,7 @@ public class LoginTest extends BaseTests {
 
     }
 
+    @Epic("SauceDemo")
     @Test
     @DisplayName("Locked out user should see error message")
     public void lockedOutUserTest() {

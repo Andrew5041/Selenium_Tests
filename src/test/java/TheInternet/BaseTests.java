@@ -22,19 +22,14 @@ public class BaseTests {
 
         ChromeOptions options = new ChromeOptions();
 
-        // 1. Tryb Incognito - to powinno ostatecznie ubić popupy haseł
         options.addArguments("--incognito");
 
-        // 2. Pozostałe argumenty optymalizacyjne
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-infobars");
 
-
-        // Opcjonalnie wyłączamy całkowicie automatyzację jako flagę (niektóre strony to wykrywają)
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         options.setExperimentalOption("useAutomationExtension", false);
 
-        // 3. Preferencje (zostawiamy te, które miałeś)
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("credentials_enable_service", false);
         prefs.put("profile.password_manager_enabled", false);

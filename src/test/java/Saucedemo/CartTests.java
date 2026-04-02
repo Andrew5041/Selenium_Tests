@@ -1,5 +1,6 @@
 package Saucedemo;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +10,7 @@ import java.util.List;
 
 public class CartTests extends BaseTests{
 
-
+    @Epic("SauceDemo")
     @Test
     public void CheckAddingProductsToCart(){
 

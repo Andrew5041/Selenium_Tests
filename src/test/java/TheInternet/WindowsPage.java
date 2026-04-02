@@ -16,8 +16,6 @@ public class WindowsPage extends BasePage{
 
     private final By newWindowHeader = By.tagName("h3");
 
-
-
     public void openNewWindow(){
 
         driver.findElement(clickNewWindowLocator).click();

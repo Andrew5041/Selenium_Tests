@@ -1,11 +1,13 @@
 package TheInternet;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
 public class MultipleWindowsTests extends BaseTests{
 
+    @Epic("TheInternet")
     @Test
     public void CheckSwitchingBetweenBrowserCarts(){
 

@@ -1,5 +1,6 @@
 package CoffeeCart;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class PromoHunterTests extends BaseTests {
 
 
-
+    @Epic("CoffeCart")
     @Test
     public void CheckGettingExtraCupOfCoffee(){
 

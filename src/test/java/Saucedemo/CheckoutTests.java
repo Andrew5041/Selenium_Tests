@@ -1,10 +1,12 @@
 package Saucedemo;
 
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CheckoutTests extends BaseTests{
 
+    @Epic("SauceDemo")
     @Test
     public void completePurchaseTest(){
 
@@ -29,7 +31,6 @@ public class CheckoutTests extends BaseTests{
         FinishPage finishPage = overviewPage.goToFinishPage();
 
         Assertions.assertEquals("Thank you for your order!", finishPage.getConfirmationInfo(), "Confirmation text is different, did you place the order ?");
-
 
     }
 }
