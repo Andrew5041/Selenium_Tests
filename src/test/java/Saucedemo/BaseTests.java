@@ -22,6 +22,11 @@ import java.util.Map;
 
             ChromeOptions options = new ChromeOptions();
 
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+
             options.addArguments("--incognito");
 
             options.addArguments("--disable-notifications");
