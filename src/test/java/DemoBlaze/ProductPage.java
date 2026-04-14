@@ -28,4 +28,13 @@ public class ProductPage extends BasePage{
         driver.findElement(goToCartButton).click();
         return new CartPage(driver, wait);
     }
+
+    public int getProductPrice(){
+
+        return Integer.parseInt((driver.findElement(By.xpath("//h3[@class='price-container']")).getText()).replaceAll("[$ *includestax]", ""));
+
+
+
+
+    }
 }
