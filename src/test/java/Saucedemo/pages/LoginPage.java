@@ -15,7 +15,7 @@ public class LoginPage extends BasePage {
     private final By errorMessage = By.cssSelector("[data-test='error']"); // Do Testu B
 
 
-    protected LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 
