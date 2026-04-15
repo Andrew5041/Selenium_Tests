@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 
-public class DragAndDropPage extends BasePage{
+public class DragAndDropPage extends BasePage {
 
 
     public DragAndDropPage(WebDriver driver) {
@@ -17,16 +17,16 @@ public class DragAndDropPage extends BasePage{
     By squareBLocator = By.cssSelector("#column-b");
 
 
-    public String getSquareHeaders(String columnName){
+    public String getSquareHeaders(String columnName) {
 
-        By headerWithinColumn = By.cssSelector("#column-"+ columnName + " header");
+        By headerWithinColumn = By.cssSelector("#column-" + columnName + " header");
 
         WebElement header = driver.findElement(headerWithinColumn);
 
         return header.getText();
     }
 
-    public void changeSquarePositions(){
+    public void changeSquarePositions() {
 
         Actions actions = new Actions(driver);
 
@@ -38,11 +38,6 @@ public class DragAndDropPage extends BasePage{
     }
 
 
-
-
-
-
-
-    }
+}
 
 

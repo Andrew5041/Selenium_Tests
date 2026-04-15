@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class NestedFramesTests extends BaseTests{
+public class NestedFramesTests extends BaseTests {
 
     @Epic("TheInternet")
     @Test
-    public void checkFramesSwitchingTest(){
+    public void checkFramesSwitchingTest() {
 
         MainPage mainPage = new MainPage(driver);
 

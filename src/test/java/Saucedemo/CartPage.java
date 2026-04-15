@@ -21,31 +21,29 @@ public class CartPage extends BasePage {
     private final By checkoutButton = By.cssSelector("#checkout");
 
 
-
     public List<String> getProductNamesFromCart() {
         List<WebElement> productNamesElements = driver.findElements(productNamesInCartList);
         List<String> productNamesFromCart = new ArrayList<>();
 
         for (WebElement element : productNamesElements) {
-            String productName = element.getText().replace( " ", "-").toLowerCase();
+            String productName = element.getText().replace(" ", "-").toLowerCase();
             productNamesFromCart.add(productName);
         }
 
         return productNamesFromCart;
     }
 
-    public void removeProductFromCart(){
+    public void removeProductFromCart() {
 
         List<WebElement> removeButtons = driver.findElements(removeButtonsList);
         removeButtons.get(0).click();
     }
 
-    public CheckoutPage goToCheckout(){
+    public CheckoutPage goToCheckout() {
 
         driver.findElement(checkoutButton).click();
 
         return new CheckoutPage(driver);
-
 
 
     }

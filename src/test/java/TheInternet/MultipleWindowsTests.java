@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
-public class MultipleWindowsTests extends BaseTests{
+public class MultipleWindowsTests extends BaseTests {
 
     @Epic("TheInternet")
     @Test
-    public void CheckSwitchingBetweenBrowserCarts(){
+    public void CheckSwitchingBetweenBrowserCarts() {
 
         MainPage mainPage = new MainPage(driver);
 

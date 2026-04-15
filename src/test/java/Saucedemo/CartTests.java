@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class CartTests extends BaseTests{
+public class CartTests extends BaseTests {
 
     @Epic("SauceDemo")
     @Test
-    public void CheckAddingProductsToCart(){
+    public void CheckAddingProductsToCart() {
 
         LoginPage loginPage = new LoginPage(driver);
 

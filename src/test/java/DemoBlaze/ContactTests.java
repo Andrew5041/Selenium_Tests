@@ -3,10 +3,10 @@ package DemoBlaze;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ContactTests extends BaseTests{
+public class ContactTests extends BaseTests {
 
     @Test
-    public void sendingContactMessageShouldFinishWithConfirmation(){
+    public void sendingContactMessageShouldFinishWithConfirmation() {
 
         HomePage homePage = new HomePage(driver, wait);
 

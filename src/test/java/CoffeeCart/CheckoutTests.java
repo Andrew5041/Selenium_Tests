@@ -10,21 +10,21 @@ public class CheckoutTests extends BaseTests {
     @Test
     public void CheckSuccessfulCheckout() {
 
-    CoffeePage coffeePage = new CoffeePage(driver);
+        CoffeePage coffeePage = new CoffeePage(driver);
 
-    coffeePage.go();
+        coffeePage.go();
 
-    coffeePage.addCoffee("Espresso");
+        coffeePage.addCoffee("Espresso");
 
-    coffeePage.pay();
+        coffeePage.pay();
 
-    coffeePage.fillPaymentForm("John", "johndoe@gmail.com");
+        coffeePage.fillPaymentForm("John", "johndoe@gmail.com");
 
-    coffeePage.submit();
+        coffeePage.submit();
 
-    String expectedMsg = "Thanks for your purchase. Please check your email for payment.";
+        String expectedMsg = "Thanks for your purchase. Please check your email for payment.";
 
-    Assertions.assertEquals(expectedMsg, coffeePage.getSuccessMessage());
+        Assertions.assertEquals(expectedMsg, coffeePage.getSuccessMessage());
 
     }
 }

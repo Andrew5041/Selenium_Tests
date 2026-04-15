@@ -11,20 +11,21 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
 
     public HomePage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
-    public void go(){
+
+    public void go() {
 
         driver.get(baseUrl);
     }
 
     public void selectCategory(String productCategory) {
 
-        String category = "//a[text()='" + productCategory +"']";
+        String category = "//a[text()='" + productCategory + "']";
         By laptopCategory = By.xpath(category);
         driver.findElement(laptopCategory).click();
     }
@@ -47,13 +48,13 @@ public class HomePage extends BasePage{
         driver.findElement(By.id("message-text")).sendKeys(message);
     }
 
-    public void sendMessage(){
+    public void sendMessage() {
 
         driver.findElement(By.xpath("//button[text()='Send message']")).click();
 
     }
 
-    public String getAlertTextAndAccept(){
+    public String getAlertTextAndAccept() {
 
         wait.until(ExpectedConditions.alertIsPresent());
 
@@ -67,7 +68,7 @@ public class HomePage extends BasePage{
 
     }
 
-    public List<Integer> getProductPrices(){
+    public List<Integer> getProductPrices() {
 
         By productCardsLocator = By.cssSelector("#tbodyid .card");
 
@@ -108,7 +109,7 @@ public class HomePage extends BasePage{
 
     }
 
-    public ProductPage goToTheProductWithTheHighestPrice(int maxPrice){
+    public ProductPage goToTheProductWithTheHighestPrice(int maxPrice) {
 
         driver.findElement(By.xpath("//h5[text()='$" + maxPrice + "']/preceding-sibling::h4/a")).click();
 

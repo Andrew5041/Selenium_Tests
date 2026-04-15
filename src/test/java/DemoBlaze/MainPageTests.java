@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 
 import java.util.List;
 
-public class MainPageTests extends BaseTests{
+public class MainPageTests extends BaseTests {
 
 
     @Test
-    public void chosenProductShouldBeTheMostExpensive(){
+    public void chosenProductShouldBeTheMostExpensive() {
 
         HomePage homePage = new HomePage(driver, wait);
 

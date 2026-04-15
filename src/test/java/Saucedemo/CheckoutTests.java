@@ -4,11 +4,11 @@ import io.qameta.allure.Epic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CheckoutTests extends BaseTests{
+public class CheckoutTests extends BaseTests {
 
     @Epic("SauceDemo")
     @Test
-    public void completePurchaseTest(){
+    public void completePurchaseTest() {
 
         LoginPage loginPage = new LoginPage(driver);
 

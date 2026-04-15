@@ -12,7 +12,7 @@ public class PromoHunterTests extends BaseTests {
 
     @Epic("CoffeCart")
     @Test
-    public void CheckGettingExtraCupOfCoffee(){
+    public void CheckGettingExtraCupOfCoffee() {
 
         CoffeePage coffePage = new CoffeePage(driver);
 

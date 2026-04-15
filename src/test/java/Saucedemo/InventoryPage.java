@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InventoryPage extends BasePage{
+public class InventoryPage extends BasePage {
 
     private final By pageTitle = By.cssSelector(".title");
     private final By sortButtonLocator = By.cssSelector(".product_sort_container");
@@ -42,7 +42,7 @@ public class InventoryPage extends BasePage{
         return prices;
     }
 
-    public void sortPricesLowToHigh(){
+    public void sortPricesLowToHigh() {
 
         WebElement dropdown = driver.findElement(sortButtonLocator);
 
@@ -51,10 +51,10 @@ public class InventoryPage extends BasePage{
         select.selectByValue("lohi");
     }
 
-    public boolean isSorted(List<Double> pricesAfter){
+    public boolean isSorted(List<Double> pricesAfter) {
 
-        for (int i =0; i < pricesAfter.size() -1 ; i++) {
-            if (pricesAfter.get(i) > pricesAfter.get((i+1))){
+        for (int i = 0; i < pricesAfter.size() - 1; i++) {
+            if (pricesAfter.get(i) > pricesAfter.get((i + 1))) {
                 return false;
             }
         }
@@ -62,8 +62,7 @@ public class InventoryPage extends BasePage{
     }
 
 
-
-    public CartPage goToCartPage(){
+    public CartPage goToCartPage() {
 
         driver.findElement(goToCartButton).click();
 
@@ -76,7 +75,7 @@ public class InventoryPage extends BasePage{
         List<String> productNames = new ArrayList<>();
 
         for (WebElement element : productNamesElements) {
-            String productName = element.getText().replace( " ", "-").toLowerCase();
+            String productName = element.getText().replace(" ", "-").toLowerCase();
             productNames.add(productName);
         }
 
@@ -84,9 +83,7 @@ public class InventoryPage extends BasePage{
     }
 
 
-
-
-    public void addToCart(String productName){
+    public void addToCart(String productName) {
 
         String AddToCartSelector = "#add-to-cart-" + productName;
 

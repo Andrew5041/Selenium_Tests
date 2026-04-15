@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class CoffeePage extends BasePage{
+public class CoffeePage extends BasePage {
 
 
     protected CoffeePage(WebDriver driver) {
@@ -29,12 +29,12 @@ public class CoffeePage extends BasePage{
 
     By snackBarSuccesButton = By.cssSelector(".snackbar");
 
-    public void go(){
+    public void go() {
 
         driver.get(baseUrl);
     }
 
-    public void addCoffee(String name){
+    public void addCoffee(String name) {
 
         String coffeeName = "[data-test='" + name + "']";
 
@@ -42,6 +42,7 @@ public class CoffeePage extends BasePage{
 
         driver.findElement(coffeeTypeLocator).click();
     }
+
     public void acceptPromo() {
         new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.elementToBeClickable(extraCoffeeButton))
@@ -78,7 +79,7 @@ public class CoffeePage extends BasePage{
 
     }
 
-    public void fillPaymentForm(String name, String email){
+    public void fillPaymentForm(String name, String email) {
 
         new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.visibilityOfElementLocated(nameLocator));
@@ -93,7 +94,7 @@ public class CoffeePage extends BasePage{
 
     }
 
-    public void submit(){
+    public void submit() {
 
         driver.findElement(submitButton).click();
 

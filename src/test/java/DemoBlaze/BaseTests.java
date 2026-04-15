@@ -28,8 +28,6 @@ public class BaseTests {
         options.addArguments("--disable-dev-shm-usage");
 
 
-
-
         options.addArguments("--incognito");
 
         options.addArguments("--disable-notifications");
@@ -48,7 +46,7 @@ public class BaseTests {
     }
 
     @AfterEach
-    public void quitDriver(){
+    public void quitDriver() {
         driver.quit();
     }
 }

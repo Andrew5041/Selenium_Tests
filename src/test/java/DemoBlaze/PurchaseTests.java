@@ -10,7 +10,7 @@ import org.openqa.selenium.By;
 
 import java.util.List;
 
-public class PurchaseTests extends BaseTests{
+public class PurchaseTests extends BaseTests {
 
 
     String confirmationSuccess = "Thank you for your purchase!";
@@ -26,7 +26,7 @@ public class PurchaseTests extends BaseTests{
     })
     @Epic("DemoBlaze")
     @Feature("Shopping process")
-    public void purchaseShouldEndWithConfirmationText(String productCategory, String productName, String name, String creditCard ){
+    public void purchaseShouldEndWithConfirmationText(String productCategory, String productName, String name, String creditCard) {
 
         HomePage homePage = new HomePage(driver, wait);
 
@@ -50,7 +50,7 @@ public class PurchaseTests extends BaseTests{
 
 
     @Test
-    public void removingProductShouldUpdateThePrice(){
+    public void removingProductShouldUpdateThePrice() {
 
         HomePage homePage = new HomePage(driver, wait);
 

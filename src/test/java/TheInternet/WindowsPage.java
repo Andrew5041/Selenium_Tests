@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.Set;
 
-public class WindowsPage extends BasePage{
+public class WindowsPage extends BasePage {
 
 
     protected WindowsPage(WebDriver driver) {
@@ -16,7 +16,7 @@ public class WindowsPage extends BasePage{
 
     private final By newWindowHeader = By.tagName("h3");
 
-    public void openNewWindow(){
+    public void openNewWindow() {
 
         driver.findElement(clickNewWindowLocator).click();
 
@@ -38,12 +38,6 @@ public class WindowsPage extends BasePage{
     public String getHeaderText() {
         return driver.findElement(newWindowHeader).getText();
     }
-
-
-
-
-
-
 
 
 }

@@ -10,7 +10,7 @@ public class EmptyCartTests extends BaseTests {
     @Epic("CoffeCart")
     @Test
     @DisplayName("Check if cart is empty on start")
-    public void cartShouldBeEmptyOnStart(){
+    public void cartShouldBeEmptyOnStart() {
 
         CoffeePage coffeePage = new CoffeePage(driver);
 

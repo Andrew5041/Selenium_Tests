@@ -10,16 +10,17 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartPage extends BasePage{
+public class CartPage extends BasePage {
 
     public CartPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait); // DWA parametry
     }
+
     By totalSum = By.cssSelector("#totalp");
     By placeOrderButton = By.cssSelector("button[data-target='#orderModal']");
 
 
-    public void placeOrder(String name, String country, String city, String creditCard, String month, String year){
+    public void placeOrder(String name, String country, String city, String creditCard, String month, String year) {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(totalSum));
         driver.findElement(placeOrderButton).click();
@@ -44,7 +45,7 @@ public class CartPage extends BasePage{
     }
 
 
-    public List<Integer> getProductsPrices(){
+    public List<Integer> getProductsPrices() {
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tr[@class='success']")));
 
@@ -77,7 +78,7 @@ public class CartPage extends BasePage{
 
     }
 
-    public int getTotalPrice(){
+    public int getTotalPrice() {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(totalSum));
 
@@ -89,7 +90,7 @@ public class CartPage extends BasePage{
 
     }
 
-    public void deleteProduct(String productName){
+    public void deleteProduct(String productName) {
 
         By productRow = By.xpath("//td[text()='" + productName + "']");
 

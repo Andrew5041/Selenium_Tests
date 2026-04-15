@@ -11,41 +11,42 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-    public class BaseTests {
 
-        protected WebDriver driver;
+public class BaseTests {
 
-        protected WebDriverWait wait;
+    protected WebDriver driver;
 
-        @BeforeEach
-        public void setDriver() {
+    protected WebDriverWait wait;
 
-            ChromeOptions options = new ChromeOptions();
+    @BeforeEach
+    public void setDriver() {
 
-            options.addArguments("--headless=new");
-            options.addArguments("--window-size=1920,1080");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
+        ChromeOptions options = new ChromeOptions();
 
-            options.addArguments("--incognito");
+        options.addArguments("--headless=new");
+        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 
-            options.addArguments("--disable-notifications");
-            options.addArguments("--disable-infobars");
+        options.addArguments("--incognito");
 
-            options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-            options.setExperimentalOption("useAutomationExtension", false);
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-infobars");
 
-            Map<String, Object> prefs = new HashMap<>();
-            prefs.put("credentials_enable_service", false);
-            prefs.put("profile.password_manager_enabled", false);
-            options.setExperimentalOption("prefs", prefs);
+        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+        options.setExperimentalOption("useAutomationExtension", false);
 
-            driver = new ChromeDriver(options);
-            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        }
+        Map<String, Object> prefs = new HashMap<>();
+        prefs.put("credentials_enable_service", false);
+        prefs.put("profile.password_manager_enabled", false);
+        options.setExperimentalOption("prefs", prefs);
 
-        @AfterEach
-        public void quitDriver(){
-            driver.quit();
-        }
+        driver = new ChromeDriver(options);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+
+    @AfterEach
+    public void quitDriver() {
+        driver.quit();
+    }
+}

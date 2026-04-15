@@ -3,7 +3,7 @@ package Saucedemo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
 
     By loginNameLocator = By.cssSelector("#user-name");
@@ -20,13 +20,13 @@ public class LoginPage extends BasePage{
     }
 
 
-    public void go(){
+    public void go() {
 
         driver.get(baseUrl);
 
     }
 
-    public InventoryPage login(String username, String password){
+    public InventoryPage login(String username, String password) {
 
         driver.findElement(loginNameLocator).sendKeys(username);
         driver.findElement(passwordLocator).sendKeys(password);

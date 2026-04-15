@@ -12,7 +12,7 @@ public class SortingTest extends BaseTests {
 
     @Epic("SauceDemo")
     @Test
-    public void checkSortingTest(){
+    public void checkSortingTest() {
 
         LoginPage loginPage = new LoginPage(driver);
 

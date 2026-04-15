@@ -2,9 +2,7 @@ package TheInternet;
 
 import org.openqa.selenium.WebDriver;
 
-public class MainPage extends BasePage{
-
-
+public class MainPage extends BasePage {
 
 
     protected MainPage(WebDriver driver) {
@@ -12,8 +10,7 @@ public class MainPage extends BasePage{
     }
 
 
-
-    public NestedFramesPage goToNestedFramesPage(String slug){
+    public NestedFramesPage goToNestedFramesPage(String slug) {
 
         driver.get(baseUrl + slug);
 
@@ -21,7 +18,7 @@ public class MainPage extends BasePage{
 
     }
 
-    public WindowsPage goToWindowsPage(String slug){
+    public WindowsPage goToWindowsPage(String slug) {
 
         driver.get(baseUrl + slug);
 
@@ -29,15 +26,13 @@ public class MainPage extends BasePage{
 
     }
 
-    public DragAndDropPage goToDragAndDropPage(String slug){
+    public DragAndDropPage goToDragAndDropPage(String slug) {
 
         driver.get(baseUrl + slug);
 
         return new DragAndDropPage(driver);
 
     }
-
-
 
 
 }

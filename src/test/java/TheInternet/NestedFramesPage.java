@@ -22,25 +22,25 @@ public class NestedFramesPage extends BasePage {
 
     By bottomFrameLocator = By.cssSelector("frame[src='/frame_bottom']");
 
-    public void goToTopFrame(){
+    public void goToTopFrame() {
 
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(topFrameLocator));
 
     }
 
-    public void goToMiddleFrame(){
+    public void goToMiddleFrame() {
 
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(middleFrameLocator));
 
     }
 
-    public void switchToDefaultContent(){
+    public void switchToDefaultContent() {
 
         driver.switchTo().defaultContent();
 
     }
 
-    public String getMiddleFrameText(){
+    public String getMiddleFrameText() {
 
         return driver.findElement(By.cssSelector("#content")).getText();
     }
@@ -58,11 +58,6 @@ public class NestedFramesPage extends BasePage {
         // Ramka dolna ma tekst bezpośrednio w body
         return driver.findElement(By.tagName("body")).getText().trim();
     }
-
-
-
-
-
 
 
 }
